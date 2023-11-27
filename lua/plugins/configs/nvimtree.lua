@@ -19,7 +19,7 @@ local options = {
     preserve_window_proportions = true,
   },
   git = {
-    enable = false,
+    enable = true,
     ignore = true,
   },
   filesystem_watchers = {
@@ -44,7 +44,7 @@ local options = {
         file = true,
         folder = true,
         folder_arrow = true,
-        git = false,
+        git = true,
       },
 
       glyphs = {
@@ -65,7 +65,7 @@ local options = {
           staged = "✓",
           unmerged = "",
           renamed = "➜",
-          untracked = "★",
+          untracked = "",
           deleted = "",
           ignored = "◌",
         },

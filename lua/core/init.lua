@@ -107,6 +107,24 @@ autocmd("BufWritePost", {
   end,
 })
 
+-- Auto resize panes when resizing nvim window
+autocmd("VimResized", {
+  pattern = "*",
+  command = "tabdo wincmd =",
+})
+
+-- Auto reload buffers even when not in focus
+autocmd({ "FocusGained", "BufEnter" }, {
+  pattern = "*",
+  command = "silent! checktime",
+})
+
+-- Set git commit rulers 50/72 character limit
+autocmd("FileType", {
+  pattern = "gitcommit",
+  command = "setlocal colorcolumn=50\\,72",
+})
+
 -------------------------------------- commands ------------------------------------------
 local new_cmd = vim.api.nvim_create_user_command
 
