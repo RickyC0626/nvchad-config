@@ -119,6 +119,12 @@ autocmd({ "FocusGained", "BufEnter" }, {
   command = "silent! checktime",
 })
 
+-- Set default ruler to 80 character limit
+autocmd("FileType", {
+  pattern = "*",
+  command = "setlocal colorcolumn=80",
+})
+
 -- Set git commit rulers 50/72 character limit
 autocmd("FileType", {
   pattern = "gitcommit",
